@@ -16,6 +16,8 @@ const init = () => {
         cors({
             origin: [CLIENT_URL, CLIENT_ADMIN_URL],
             credentials: true,
+            methods: ["GET", "POST", "PUT", "DELETE"],
+            allowedHeaders: ["Content-Type", "Authorization"],
         })
     );
     app.use(morgan("dev"));
