@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "seed": "node src/seeders/index.js",
     "start": "nodemon start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -8,6 +8,7 @@ const categorySchema = new Schema(
         imgSrc: String,
         altText: String,
         itemCount: String,
+        slug: String,
     },
     {
         timestamps: true,

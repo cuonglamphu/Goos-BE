@@ -14,13 +14,13 @@ module.exports.authMiddleware = async (req, res, next) => {
             _id: decoded.id,
         });
         if (!user) {
-            return res.status(401).send({ error: "Unauthorized" });
+            return res.status(401).send({ error: "Unauthorized user" });
         } else {
             req.user = user;
             req.token = token;
             next();
         }
     } catch (error) {
-        res.status(401).send({ error: "Unauthorized" });
+        res.status(401).send({ error: "Unauthorized error" });
     }
 };
