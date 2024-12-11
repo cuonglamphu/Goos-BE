@@ -14,7 +14,7 @@ const init = () => {
     const app = express();
     app.use(
         cors({
-            origin: [CLIENT_URL, CLIENT_ADMIN_URL],
+            origin: ["*"],
             credentials: true,
             methods: ["GET", "POST", "PUT", "DELETE"],
             allowedHeaders: ["Content-Type", "Authorization"],
