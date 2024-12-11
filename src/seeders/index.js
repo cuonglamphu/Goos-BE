@@ -4,7 +4,9 @@ const seedProducts = require("./productSeeder");
 const seedUsers = require("./userSeeder");
 
 // Use environment variable for MongoDB connection
-const MONGODB_URI = process.env.DB_URL || "mongodb://localhost:27017/final";
+const MONGODB_URI =
+    process.env.DB_URL ||
+    "mongodb+srv://cuong:123123123@seatcount.c35xd.mongodb.net/?retryWrites=true&w=majority&appName=seatcount/final";
 
 const seedDatabase = async () => {
     try {

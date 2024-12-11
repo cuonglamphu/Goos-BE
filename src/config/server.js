@@ -17,7 +17,7 @@ const init = () => {
     app.use(express.urlencoded({ extended: false }));
     app.use(
         session({
-            secret: SECRET_KEY,
+            secret: SECRET_KEY || "ecomus",
             resave: false,
             saveUninitialized: true,
             cookie: { secure: false, maxAge: 30000000 },
