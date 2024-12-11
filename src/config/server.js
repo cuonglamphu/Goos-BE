@@ -9,14 +9,22 @@ const cors = require("cors");
 const SECRET_KEY = process.env.SECRET_KEY || "ecomus";
 const CLIENT_URL = process.env.CLIENT_URL || "https://goos-frontend.vercel.app";
 const CLIENT_ADMIN_URL =
-    process.env.CLIENT_ADMIN_URL || "https://goos-admin.vercel.app/";
+    process.env.CLIENT_ADMIN_URL || "https://goos-admin.vercel.app";
 const init = () => {
     const app = express();
     app.use(
         cors({
-            origin: ["*"],
+            origin: [CLIENT_URL, CLIENT_ADMIN_URL],
             credentials: true,
-            methods: ["GET", "POST", "PUT", "DELETE"],
+            methods: [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE",
+                "OPTIONS",
+                "PATCH",
+                "HEAD",
+            ],
             allowedHeaders: ["Content-Type", "Authorization"],
         })
     );
